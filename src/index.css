@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+:root {
+  --main-color: #0aad0a;
+  --light-color: #f0f3f2;
+  --rating-color: #ffc902;
+  --font-family: "Encode Sans Expanded", sans-serif;
+}
+body {
+  font-family: var(--font-family);
+}
+.rating-color {
+  color: var(--rating-color);
+}
+.text-main {
+  color: var(--main-color);
+}
+.bg-main {
+  background-color: var(--main-color);
+}
+.product .btn {
+  transition: transform 1s, opacity 1s;
+  transform: translateY(100%);
+  opacity: 0;
+}
+.product:hover .btn {
+  opacity: 1;
+  transform: translateY(0%);
+}
+.active {
+  @apply bg-[#0aad0a] px-1 text-white rounded;
+}
+.mainlayer {
+  @apply flex flex-wrap gap-y-3;
+}
